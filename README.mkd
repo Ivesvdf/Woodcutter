@@ -14,15 +14,19 @@ If you want pretty colors (in ANSI color code supporting terminals):
 Then use the functions
 
 For info messages:
+
     LOGI("Some information");
 
 For warning messages: 
+
     LOGW("Be warned, flux capacitor getting hot");
 
 For error messages:
+
     LOGE("An error occured: something serious!");
 
 For fatal error messages:
+
     LOGF("The flux capacitor overloaded and now everything stops.");
 
 Only the logging messages with a high enough warning level, as defined by minloglevel are displayed. INFO < WARN < ERROR < FATAL. 
