@@ -1,0 +1,44 @@
+= Woodcutter =
+Woodcutter is a free and simple logging framework. It's installed by simply including the file "woodcutter.h" everywhere you need to log (or obviously in one header file that's included in every file you need to log). 
+
+It can be configured (in any function, but usually main()) like this
+
+    Woodcutter::minloglevel(INFO);
+
+to set the minimal logging level. Allowed parameters are INFO, WARN, FATAL and ERROR. 
+
+If you want pretty colors (in ANSI color code supporting terminals):
+
+    Woodcutter::setColors(true);
+
+Then use the functions
+
+    LOGI("Some information");
+    LOGW("Be warned, flux capacitor getting hot");
+    LOGE("An error occured: something serious!")
+    LOGF("The flux capacitor overloaded and now everything stops.");
+
+Only the logging messages with a high enough warning level, as defined by minloglevel are displayed. INFO < WARN < ERROR < FATAL. 
+
+After printing a FATAL message, the program will quit. 
+
+== LICENSE ==
+Copyright (C) 2011 by Ives van der Flaas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
