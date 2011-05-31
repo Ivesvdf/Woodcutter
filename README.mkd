@@ -1,4 +1,4 @@
-= Woodcutter =
+# Woodcutter #
 Woodcutter is a free and simple logging framework. It's installed by simply including the file "woodcutter.h" everywhere you need to log (or obviously in one header file that's included in every file you need to log). 
 
 It can be configured (in any function, but usually main()) like this
@@ -22,7 +22,9 @@ Only the logging messages with a high enough warning level, as defined by minlog
 
 After printing a FATAL message, the program will quit. 
 
-== LICENSE ==
+For a working version: see main.cpp (compile with `g++ main.cpp` and everything should be OK). 
+
+## LICENSE ##
 Copyright (C) 2011 by Ives van der Flaas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
